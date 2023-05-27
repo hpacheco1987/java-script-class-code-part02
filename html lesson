@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="aula.css">
+  <title>Aula de Manipulação de tempo</title>
+</head>
+
+<style>
+  #quadro {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: #fff;
+  }
+</style>
+
+<body>
+
+  <!-- 
+  <section class="container">
+    <h1>Meu Timer</h1>
+    <p class="relogio">00:00:00</p>
+    <p>
+      <button class="iniciar">Iniciar</button>
+      <button class="pausar">Pausar</button>
+      <button class="zerar">Zerar</button>
+    </p>
+  </section> 
+  -->
+
+  <div id="quadro">
+    <h1></h1>
+  </div>
+
+  <button id="iniciar">Iniciar</button>
+  <button id="parar">Parar</button>
+
+  <script>
+    const mudarCorQuadrado = (function () {
+      let time;
+
+      // Criar uma função para mudar a cor da div
+      function mudaCor() {
+        /* Vamos associar a função a um intervalo */
+
+        // Primeiro obter o objeto que vou trabalhar
+        var obj = document.getElementById('quadro');
+
+        // Criando uma variável aleatória para cada cor
+        var r = Math.floor(Math.random() * 255);
+        var g = Math.floor(Math.random() * 255);
+        var b = Math.floor(Math.random() * 255);
+
+        obj.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+      }
+
+      function iniciar() {
+        time = setInterval(mudaCor, 1000);
+      }
+
+      function parar() {
+        clearInterval(time);
+      }
+
+      function addEventos() {
+        document.getElementById('iniciar').addEventListener('click', iniciar);
+        document.getElementById('parar').addEventListener('click', parar);
+      }
+
+      window.addEventListener('load', addEventos);
+    });
+
+    const escolha = confirm('Você quer iniciar o comando?');
+    const resposta = escolha === true ? 'Sim' : 'Não';
+    if (resposta === true) {
+      mudarCorQuadrado();
+    } else { alert('Fim de programa') }
+
+  </script>
+</body>
+
+</html>
