@@ -1,3 +1,11 @@
+
+/*
+This code shows a beginner's attempt with limited creativity :p but I'll strive to improve further.
+*/
+
+
+
+
 const viewInfoPage = (function () {
 
   // Global scope of the self-invoking function 'viewInfoPage'
