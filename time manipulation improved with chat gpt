@@ -11,6 +11,7 @@ but I'm getting better.
 
 
 
+
 const viewInfoPage = (function () {
 
   // Global scope of the self-invoking function 'viewInfoPage'
@@ -24,7 +25,7 @@ const viewInfoPage = (function () {
   }
 
   // Destructuring the object attributes
-  const { domain, proxyValue, subMask, statusPage} = objectHTTP;
+  const { domain, proxyValue, subMask, statusPage } = objectHTTP;
 
   // Random function that creates time intervals for the functions handling the object
   function rand(min = 1000, max = 3000) {
@@ -33,19 +34,13 @@ const viewInfoPage = (function () {
   }
 
   rand();
-  
+
   // Events to occur in the DOM or the program
-  
+
   // Function that displays the object's domain
   function viewDomainObjectPage(callback) {
     setTimeout(function () {
-      if (statusPage === true) {
-        viewProxyObjectPage(function() {
-          console.log(`The domain of the page is: ${domain}`);
-        });
-      } else {
-        console.log('End of program');
-      }
+      console.log(`The domain of the page is: ${domain}`);
       if (callback) callback();
     }, rand());
   }
@@ -63,15 +58,16 @@ const viewInfoPage = (function () {
     setTimeout(function () {
       if (statusPage === true) {
         console.log('The page is ONLINE');
-      } else {
-        console.log('The page is OFFLINE');
+        viewProxyObjectPage(function () {
+          viewDomainObjectPage();
+        });
+      } else if (statusPage === false) {
+        console.log('End of program');
       }
       if (callback) callback();
     }, rand());
   }
 
-  viewStatusObjectPage(function() {
-    viewDomainObjectPage();
-  });
+  viewStatusObjectPage();
 
 }());
