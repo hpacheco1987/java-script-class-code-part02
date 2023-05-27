@@ -1,1 +1,59 @@
+const viewInfoPage = (function () {
+
+  // Global scope of the self-invoking function 'viewInfoPage'
+
+  // Main object - An HTML page
+  const objectHTTP = {
+    domain: 'www.page.com.br',
+    proxyValue: '178.234.345',
+    subMask: '255.255.255',
+    statusPage: true
+  }
+
+  // Destructuring the object attributes
+  const { domain, proxyValue, subMask, statusPage} = objectHTTP;
+
+  // Random function that creates time intervals for the functions handling the object
+  function rand(min = 1000, max = 3000) {
+    const timeRand = Math.random() * (max - min) + min;
+    return Math.floor(timeRand)
+  }
+
+  rand();
+  
+  // Events to occur in the DOM or the program
+
+  // Function that displays the object's domain
+  function viewDomainObjectPage() {
+    setTimeout(function () {
+      console.log(`The domain of the page is: ${domain}`);
+    }, rand());
+  }
+
+  // Function that displays the object's proxy
+  function viewProxyObjectPage() {
+    setTimeout(function () {
+      console.log(`The object's proxy is ${proxyValue}`)
+    },rand())
+  }
+
+  // Function that displays the page's status, if true, the page is online
+  function viewStatusObjectPage() {
+    setTimeout(function () {
+      if (statusPage === true) {
+        console.log('The page is ONLINE');
+      } else  if(statusPage === false){
+        console.log('The page is OFFLINE')
+      }
+    }, rand())
+  }
+
+  function sendFunctions() {
+    viewDomainObjectPage();
+    viewProxyObjectPage();
+    viewStatusObjectPage();
+  };
+
+  sendFunctions();
+}());
 
