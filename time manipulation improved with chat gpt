@@ -1,6 +1,15 @@
 
 
 /**Improved with ChatGPT 27/05/23 */
+This code shows a beginner's attempt with limited creativity :p 
+but I will strive to improve further. ChatGPT has been a great
+teacher and helper on this journey. In the next code I will try 
+to insert concepts of Networks and Protocols and Algorithms to 
+create diverse flows. I apologize if there are any mistakes, 
+but I'm getting better.
+
+
+
 
 const viewInfoPage = (function () {
 
