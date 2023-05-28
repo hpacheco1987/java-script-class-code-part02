@@ -1,0 +1,48 @@
+
+// COMMAND FLOW USING CONDITIONALS IN JAVASCRIPT
+
+var q1 = !true;
+var q2 = !true;
+var q3 = !true;
+
+if (q1 === true) {
+// Command a
+console.log('a');
+console.log('END OF PROGRAM');
+} else if (q1 === false) {
+// Command b
+console.log('b');
+if (q2 === true) {
+// Command d
+console.log('d');
+// Command c
+console.log('c');
+// Command 'a'
+console.log('a');
+console.log('END OF PROGRAM');
+} else if (q2 === false) {
+// Command e
+console.log('e');
+if (q3 === true) {
+// Command g
+console.log('g');
+// Command f
+console.log('f');
+// Command c
+console.log('c');
+// Command a
+console.log('a');
+console.log('END OF PROGRAM');
+} else if (q3 === false) {
+// Command h
+console.log('h');
+// Command f
+console.log('f');
+// Command c
+console.log('c');
+// Command a
+console.log('a');
+console.log('END OF PROGRAM');
+}
+}
+}
