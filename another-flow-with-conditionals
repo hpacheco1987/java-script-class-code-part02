@@ -44,3 +44,74 @@ console.log('c');
 console.log('END OF PROGRAM');
 }
 }
+
+
+
+
+
+
+var qi1 = !true;
+var qi2 = !true;
+
+if (qi1 === true) {
+console.log('a');
+console.log('c');
+console.log('END OF PROGRAM');
+} else if (qi1 === false) {
+console.log('b');
+if (qi2 === true) {
+console.log('c');
+console.log('c');
+console.log('END OF PROGRAM');
+
+} else if (qi2 === false) {
+console.log('d');
+console.log('c');
+console.log('END OF PROGRAM');
+}
+}
+
+var q1 = !true;
+var q2 = true;
+var q3 = true;
+
+if (q1 === true) {
+console.log('a');
+console.log('b');
+console.log('c');
+console.log('END OF PROGRAM');
+} else if (q1 === false) {
+if (q2 === true) {
+console.log('b');
+} else if (q2 === false) {
+if (q3 === true) {
+console.log('c');
+console.log('END OF PROGRAM');
+} else if (q3 === false) {
+console.log('END OF PROGRAM');
+}
+}
+}
+
+var q1 = true;
+var q2 = true;
+var q3 = true;
+
+if (q1 === true && q2 === true && q3 === true) {
+console.log('a,b,c');
+} else if (q1 === false && q2 === true && q3 === true) {
+console.log('b,c');
+} else if (q1 === false & q2 === false && q3 === true) {
+console.log('c');
+} else if (q1 === false && q2 === false && q3 === false) {
+console.log('');
+}
+
+(function (max) {
+
+var num1 = 12;
+var num2 = 13;
+var num3 = 14;
+var resultadoFinal;
+
+const calculus = (num1, num2, num3, resultadoFinal) => {
