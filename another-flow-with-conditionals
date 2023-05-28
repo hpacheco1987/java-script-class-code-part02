@@ -1,0 +1,46 @@
+// ANOTHER FLOW WITH CONDITIONALS
+
+var a1 = !true;
+var a2 = true;
+
+if (a1 === true) {
+// Command a
+console.log('a');
+// Command c
+console.log('c');
+console.log('END OF PROGRAM');
+} else if (a1 === false) {
+// Command b
+console.log('b');
+if (a2 === true) {
+// Command c
+console.log('c');
+console.log('END OF PROGRAM');
+} else if (a2 === false) {
+// Command d
+console.log('d');
+// Command c
+console.log('c');
+console.log('END OF PROGRAM');
+}
+}
+
+var q1 = true;
+var q2 = !true;
+
+if (q1 === true) {
+console.log('a');
+console.log('c');
+console.log('END OF PROGRAM');
+} else if (q1 === false) {
+console.log('b');
+console.log('END OF PROGRAM');
+if (q2 === true) {
+console.log('c');
+console.log('END OF PROGRAM');
+} else if (q2 === false) {
+console.log('d');
+console.log('c');
+console.log('END OF PROGRAM');
+}
+}
