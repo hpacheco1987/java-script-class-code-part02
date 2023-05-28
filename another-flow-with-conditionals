@@ -103,7 +103,21 @@ console.log('a,b,c');
 console.log('b,c');
 } else if (q1 === false & q2 === false && q3 === true) {
 console.log('c');
-} else if (q1 === false && q2 === false && q3 === false) {
+} else if (q1 === false && q2 === false && q3 === false) {}
+
+console.log(calculus(num1, num2, num3, resultadoFinal));
+
+})();
+
+var arqu = "abcdef";
+console.log('');
+
+if (arqu.charAt(0) === arqu.charAt(0).toUpperCase() && arqu.length <= 8 && typeof arqu.charAt(0) === 'string' && (arqu.charAt(0)=== 'a' || arqu.charAt(0) === 'b'|| arqu.charAt(0) === 'c'|| arqu.charAt(0)=== 'd'|| arqu.charAt(0)=== 'e'|| arqu.charAt(0)==='f' )) {
+let password = arqu;
+console.log('Correct password');
+} else {
+console.log('Incorrect password');
+}
 console.log('');
 }
 
