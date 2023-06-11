@@ -1,0 +1,53 @@
+
+
+let a;
+let b;
+let m = 2;
+let n = 2;
+let x;
+let y;
+
+
+//multiplicação de potências de mesma base
+let resultado1 = (a ** m) + (a ** n);
+let resultado2 = a ** (m + n);
+//divisão de potências de mesma base
+let resultado3 = (a ** (m)) / (a ** (n));
+let resultado4 = a ** (m - n);
+//potência de potência
+let resultado5 = (a ** (m)) ** n;
+let resultado6 = a ** (m * n);
+//potência de produto
+let resultado7 = (a * b) ** m;
+let resultado8 = (a ** (m)) * (b ** (n));
+//potência de quociente
+let resultado9 = (a / b) ** m;
+let resultado10 = (a ** m) / (a ** n);
+
+
+
+//Duas forma de resolver as equações exponenciais
+
+
+
+
+//Reduzir à base comum
+if (a > 0 && a != 1) {
+   if (m == n) {
+       console.log("As potências têm a mesma base e expoentes iguais.");
+       console.log(a ** m == a ** n); // Verifica se a ** m é igual a a ** n
+   }
+}
+
+
+//Definição de logaritmo
+if (a > 0 && a != 1) {
+   if (Math.pow(a, x) === b) {
+      console.log("As potências têm a mesma base e expoentes iguais.");
+      console.log(Math.log(b) / Math.log(a)); // Cálculo do logaritmo na base a de b
+   }
+}
+
+
+
+
